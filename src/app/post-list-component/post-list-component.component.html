@@ -1,7 +1,7 @@
 <li class="row">
   <div [ngClass]="{'list-group-item': true,
   'list-group-item-success': postLoveIt > 0,
-  'list-group-item-danger': appareilStatus < 0 }">
+  'list-group-item-danger': postLoveIt < 0 }">
   <div class="row">
     <h4 class="col-lg-6">{{ postTitre }}</h4>
     <small class="col-lg-6 text-right">{{ postDate | date  : 'dd/MM/yyyy, HH:mm'}}</small>
