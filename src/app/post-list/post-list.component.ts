@@ -1,11 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-post-list-component',
-  templateUrl: './post-list-component.component.html',
-  styleUrls: ['./post-list-component.component.scss']
+  selector: 'app-post-list',
+  templateUrl: './post-list.component.html',
+  styleUrls: ['./post-list.component.scss']
 })
-export class PostListComponentComponent implements OnInit {
+export class PostListComponent implements OnInit {
 
   @Input() postTitre : String;
 
@@ -27,4 +27,5 @@ export class PostListComponentComponent implements OnInit {
   onRefuse(){
     this.postLoveIt--;
   }
+
 }
