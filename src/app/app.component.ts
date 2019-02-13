@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-root',
@@ -6,23 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  posts=[ {
-    title: 'Post 1',
-    content: 'première ppost de mon blog qui est un blog très visiter par ailleur',
-    loveIts: 0,
-    created_at: Date()
-  },
-  {
-    title: 'Post 2',
-    content: 'deuxième post de mon blog qui est un blog très visiter par ailleur',
-    loveIts: 0,
-    created_at: Date()
-  },
-  {
-    title: 'Post 3',
-    content: 'troisième post de mon blog qui est un blog très visiter par ailleur',
-    loveIts: 0,
-    created_at: Date()
+  constructor(){
+    const config = {
+      apiKey: "AIzaSyAz8qlISRLROttTk-lsNN0nhZU49Ev5y9o",
+      authDomain: "tpopenclassroom-67d99.firebaseapp.com",
+      databaseURL: "https://tpopenclassroom-67d99.firebaseio.com",
+      projectId: "tpopenclassroom-67d99",
+      storageBucket: "tpopenclassroom-67d99.appspot.com",
+      messagingSenderId: "61779841303"
+    };
+    firebase.initializeApp(config);
   }
-];
 }
